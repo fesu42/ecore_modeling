@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.whz.modeling.example.model/src" modelPluginID="de.whz.modeling.example.model"
+    modelName="Project" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>project.ecore</foreignModel>
+  <genPackages prefix="Project" basePackage="de.whz.modeling.example" disposableProviderFactory="true"
+      ecorePackage="project.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="project.ecore#//ParticipantRole">
+      <genEnumLiterals ecoreEnumLiteral="project.ecore#//ParticipantRole/Tester"/>
+      <genEnumLiterals ecoreEnumLiteral="project.ecore#//ParticipantRole/Stakeholer"/>
+      <genEnumLiterals ecoreEnumLiteral="project.ecore#//ParticipantRole/Manager"/>
+      <genEnumLiterals ecoreEnumLiteral="project.ecore#//ParticipantRole/Developer"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="project.ecore#//Integer"/>
+    <genDataTypes ecoreDataType="project.ecore#//Long"/>
+    <genDataTypes ecoreDataType="project.ecore#//Float"/>
+    <genDataTypes ecoreDataType="project.ecore#//Double"/>
+    <genDataTypes ecoreDataType="project.ecore#//Byte"/>
+    <genDataTypes ecoreDataType="project.ecore#//String"/>
+    <genDataTypes ecoreDataType="project.ecore#//Date"/>
+    <genDataTypes ecoreDataType="project.ecore#//Boolean"/>
+    <genDataTypes ecoreDataType="project.ecore#//UUID"/>
+    <genClasses ecoreClass="project.ecore#//Organization">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Organization/employees"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Organization/projects"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="project.ecore#//IIdentifiable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//IIdentifiable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//IIdentifiable/uuid"/>
+    </genClasses>
+    <genClasses ecoreClass="project.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Person/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Person/weeklyWorkload"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference project.ecore#//Person/organization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference project.ecore#//Person/participantes"/>
+    </genClasses>
+    <genClasses ecoreClass="project.ecore#//Project">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference project.ecore#//Project/organization"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference project.ecore#//Project/participant"/>
+    </genClasses>
+    <genClasses ecoreClass="project.ecore#//Participant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Participant/workload"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute project.ecore#//Participant/role"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference project.ecore#//Participant/project"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference project.ecore#//Participant/person"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated project -->
+      <package
+            uri="http://whz.de/modeling/project"
+            class="de.whz.modeling.example.project.ProjectPackage"
+            genModel="model/project.genmodel"/>
+   </extension>
+
+</plugin>
