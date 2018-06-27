@@ -56,7 +56,7 @@ public class NavigatorPart {
 			public void mouseDoubleClick(MouseEvent e) {
 				Object selection = tree.getStructuredSelection().getFirstElement();
 				if (selection instanceof EObject) {
-					MPart genericEditor = partService.createPart(GenericEditorPart.PART_ID);
+					MPart genericEditor = partService.createPart(GenericEObjectViewPart.PART_ID);
 					partService.showPart(genericEditor, PartState.ACTIVATE);
 					((IEditor) genericEditor.getObject()).setInput((EObject) selection);
 				}

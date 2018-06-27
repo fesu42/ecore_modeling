@@ -16,7 +16,7 @@
   </rootContext>
   <descriptors xmi:id="_KsbZ4GZyEei0YqT8wHF_Ow" elementId="de.whz.modeling.example.rcp.partdescriptor.projectmanagement" label="Project Management" allowMultiple="true" category="editorStack" closeable="true"/>
   <descriptors xmi:id="_NAJwAGZyEei0YqT8wHF_Ow" elementId="de.whz.modeling.example.rcp.partdescriptor.personeditor" label="Person Editor" allowMultiple="true" category="editorStack" closeable="true"/>
-  <descriptors xmi:id="_5gPvQG1XEeip0MC7TaILNA" elementId="de.whz.modeling.example.rcp.partdescriptor.genericeditor" label="Generic Editor" allowMultiple="true" category="editorStack" closeable="true" contributionURI="bundleclass://de.whz.modeling.example.rcp/de.whz.modeling.example.rcp.parts.GenericEditorPart"/>
+  <descriptors xmi:id="_5gPvQG1XEeip0MC7TaILNA" elementId="de.whz.modeling.example.rcp.partdescriptor.genericeditor" label="Generic Editor" allowMultiple="true" category="editorStack" closeable="true" contributionURI="bundleclass://de.whz.modeling.example.rcp/de.whz.modeling.example.rcp.parts.GenericEObjectViewPart"/>
   <addons xmi:id="_c3AF0sjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_c3AF08jYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_c3AF1MjYEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

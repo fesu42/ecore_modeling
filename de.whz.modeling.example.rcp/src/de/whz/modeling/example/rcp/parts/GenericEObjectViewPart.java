@@ -31,22 +31,20 @@ import org.eclipse.swt.widgets.Text;
 
 import de.whz.modeling.example.project.util.ProjectValidator;
 
-public class GenericEditorPart implements IEditor {
+public class GenericEObjectViewPart implements IEditor {
 
 	protected static final String PART_ID = "de.whz.modeling.example.rcp.partdescriptor.genericeditor";
 	private Composite content;
-	private EObject editorContext;
+	private EObject contextEObject;
 
 	@Inject
 	private UISynchronize uiSync;
 	@Inject
 	private EPartService partService;
-	private Composite parent;
 	private MPart part;
 
 	@PostConstruct
 	public void postConstruct(Composite parent, MPart part) {
-		this.parent = parent;
 		this.part = part;
 		content = new Composite(parent, SWT.NONE);
 		content.setBackground(parent.getDisplay().getSystemColor(SWT.COLOR_WHITE));
@@ -71,17 +69,17 @@ public class GenericEditorPart implements IEditor {
 
 	@Override
 	public void setInput(EObject contextObject) {
-		this.editorContext = contextObject;
-		if (editorContext == null)
+		this.contextEObject = contextObject;
+		if (contextEObject == null)
 			return;
 
 		uiSync.syncExec(() -> {
-			part.setLabel("Editor: " + genericLabelProvider.getText(editorContext));
+			part.setLabel("View: " + genericLabelProvider.getText(contextEObject));
 
-			for (EStructuralFeature feature : editorContext.eClass().getEAllStructuralFeatures()) {
+			for (EStructuralFeature feature : contextEObject.eClass().getEAllStructuralFeatures()) {
 				Label label = new Label(content, SWT.NONE);
 				String featureLabel = feature.getName();
-				if (feature.getLowerBound() > 1)
+				if (feature.getLowerBound() > 0)
 					featureLabel += " *";
 				label.setText(featureLabel);
 
@@ -89,13 +87,13 @@ public class GenericEditorPart implements IEditor {
 					ListViewer listViewer = new ListViewer(content);
 					listViewer.setContentProvider(new ArrayContentProvider());
 					listViewer.setLabelProvider(genericLabelProvider);
-					listViewer.setInput(editorContext.eGet(feature));
+					listViewer.setInput(contextEObject.eGet(feature));
 					addDoubleClickSupport(listViewer);
 					GridDataFactory.fillDefaults().grab(true, true).applyTo(listViewer.getList());
 				} else {
 					Text tx = new Text(content, SWT.BORDER);
 					GridDataFactory.fillDefaults().grab(true, false).applyTo(tx);
-					tx.setText(genericLabelProvider.getText(editorContext.eGet(feature)));
+					tx.setText(genericLabelProvider.getText(contextEObject.eGet(feature)));
 				}
 			}
 
@@ -109,7 +107,7 @@ public class GenericEditorPart implements IEditor {
 			ProjectValidator validator = ProjectValidator.INSTANCE;
 			BasicDiagnostic diagnostic = new BasicDiagnostic();
 			String validationMessage;
-			if (!validator.validate(editorContext, diagnostic, null)) {
+			if (!validator.validate(contextEObject, diagnostic, null)) {
 				validationMessage = diagnostic.getChildren().parallelStream().map(diag -> diag.getMessage())
 						.collect(Collectors.joining(System.lineSeparator(), "\u2022 ", ""));
 			} else {
@@ -127,7 +125,7 @@ public class GenericEditorPart implements IEditor {
 			public void mouseDoubleClick(MouseEvent e) {
 				Object selection = viewer.getStructuredSelection().getFirstElement();
 				if (selection instanceof EObject) {
-					MPart genericEditor = partService.createPart(GenericEditorPart.PART_ID);
+					MPart genericEditor = partService.createPart(GenericEObjectViewPart.PART_ID);
 					partService.showPart(genericEditor, PartState.ACTIVATE);
 					((IEditor) genericEditor.getObject()).setInput((EObject) selection);
 				}
