@@ -79,6 +79,7 @@ public interface Person extends IIdentifiable {
 
 	/**
 	 * Returns the value of the '<em><b>Total Weekly Workload</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Total Weekly Workload</em>' attribute isn't clear,
@@ -86,22 +87,11 @@ public interface Person extends IIdentifiable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Total Weekly Workload</em>' attribute.
-	 * @see #setTotalWeeklyWorkload(Integer)
 	 * @see de.whz.modeling.example.project.ProjectPackage#getPerson_TotalWeeklyWorkload()
-	 * @model dataType="de.whz.modeling.example.project.HoursPerWeek" required="true" derived="true" ordered="false"
+	 * @model default="0" dataType="de.whz.modeling.example.project.HoursPerWeek" required="true" transient="true" changeable="false" derived="true" ordered="false"
 	 * @generated
 	 */
 	Integer getTotalWeeklyWorkload();
-
-	/**
-	 * Sets the value of the '{@link de.whz.modeling.example.project.Person#getTotalWeeklyWorkload <em>Total Weekly Workload</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Total Weekly Workload</em>' attribute.
-	 * @see #getTotalWeeklyWorkload()
-	 * @generated
-	 */
-	void setTotalWeeklyWorkload(Integer value);
 
 	/**
 	 * Returns the value of the '<em><b>Organization</b></em>' container reference.

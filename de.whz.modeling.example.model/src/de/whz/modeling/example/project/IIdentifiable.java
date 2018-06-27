@@ -2,6 +2,7 @@
  */
 package de.whz.modeling.example.project;
 
+import java.util.UUID;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -57,12 +58,12 @@ public interface IIdentifiable extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Uuid</em>' attribute.
-	 * @see #setUuid(String)
+	 * @see #setUuid(UUID)
 	 * @see de.whz.modeling.example.project.ProjectPackage#getIIdentifiable_Uuid()
-	 * @model dataType="de.whz.modeling.example.project.UUID" required="true" ordered="false"
+	 * @model id="true" dataType="de.whz.modeling.example.project.UUID" required="true" ordered="false"
 	 * @generated
 	 */
-	String getUuid();
+	UUID getUuid();
 
 	/**
 	 * Sets the value of the '{@link de.whz.modeling.example.project.IIdentifiable#getUuid <em>Uuid</em>}' attribute.
@@ -72,6 +73,6 @@ public interface IIdentifiable extends EObject {
 	 * @see #getUuid()
 	 * @generated
 	 */
-	void setUuid(String value);
+	void setUuid(UUID value);
 
 } // IIdentifiable

@@ -9,6 +9,7 @@ import de.whz.modeling.example.project.ProjectPackage;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -68,7 +69,7 @@ public class OrganizationImpl extends MinimalEObjectImpl.Container implements Or
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -78,7 +79,7 @@ public class OrganizationImpl extends MinimalEObjectImpl.Container implements Or
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProjects() <em>Projects</em>}' containment reference list.
@@ -145,7 +146,7 @@ public class OrganizationImpl extends MinimalEObjectImpl.Container implements Or
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -154,8 +155,8 @@ public class OrganizationImpl extends MinimalEObjectImpl.Container implements Or
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.ORGANIZATION__UUID, oldUuid, uuid));
@@ -251,7 +252,7 @@ public class OrganizationImpl extends MinimalEObjectImpl.Container implements Or
 				setName((String)newValue);
 				return;
 			case ProjectPackage.ORGANIZATION__UUID:
-				setUuid((String)newValue);
+				setUuid((UUID)newValue);
 				return;
 			case ProjectPackage.ORGANIZATION__PROJECTS:
 				getProjects().clear();

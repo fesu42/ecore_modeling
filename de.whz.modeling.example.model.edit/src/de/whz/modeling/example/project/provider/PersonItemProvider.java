@@ -172,7 +172,7 @@ public class PersonItemProvider
 				 getString("_UI_Person_totalWeeklyWorkload_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Person_totalWeeklyWorkload_feature", "_UI_Person_type"),
 				 ProjectPackage.Literals.PERSON__TOTAL_WEEKLY_WORKLOAD,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

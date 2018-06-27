@@ -20,7 +20,7 @@ public enum DemoDataHelper {
 		Organization organization = ProjectFactory.eINSTANCE.createOrganization();
 		// use the API to set modeled properties
 		organization.setName("The Inc.");
-		organization.setUuid(UUID.randomUUID().toString());
+		organization.setUuid(UUID.randomUUID());
 		// add the created object to a resource
 		container.getContents().add(organization);
 
@@ -28,22 +28,23 @@ public enum DemoDataHelper {
 	}
 
 	public void initDemoData(Organization organization) {
+
 		// create a new project object and use the provided API to set properties
 		Project fooTc = ProjectFactory.eINSTANCE.createProject();
 		fooTc.setName("Foo Thin Client");
-		fooTc.setUuid(UUID.randomUUID().toString());
+		fooTc.setUuid(UUID.randomUUID());
 		// add the project to a container
 		organization.getProjects().add(fooTc);
 
 		Project snafu = ProjectFactory.eINSTANCE.createProject();
 		organization.getProjects().add(snafu);
 		snafu.setName("SNAFU");
-		snafu.setUuid(UUID.randomUUID().toString());
+		snafu.setUuid(UUID.randomUUID());
 
 		Person alice = ProjectFactory.eINSTANCE.createPerson();
 		organization.getEmployees().add(alice);
 		alice.setName("Alice");
-		alice.setUuid(UUID.randomUUID().toString());
+		alice.setUuid(UUID.randomUUID());
 		alice.setEmail("alice@the-inc.com");
 		alice.setWeeklyWorkload(32);
 
@@ -56,7 +57,7 @@ public enum DemoDataHelper {
 		Person bob = ProjectFactory.eINSTANCE.createPerson();
 		organization.getEmployees().add(bob);
 		bob.setName("Bob");
-		bob.setUuid(UUID.randomUUID().toString());
+		bob.setUuid(UUID.randomUUID());
 		bob.setEmail("bob@the-inc.com");
 		bob.setWeeklyWorkload(40);
 
@@ -79,7 +80,7 @@ public enum DemoDataHelper {
 		bobSnafuTester.setWeeklyWorkload(8);
 
 		Person charlie = ProjectFactory.eINSTANCE.createPerson();
-		charlie.setUuid(UUID.randomUUID().toString());
+		charlie.setUuid(UUID.randomUUID());
 		charlie.setName("Charlie");
 		charlie.setEmail("charlie@the-inc.com");
 		charlie.setOrganization(organization);

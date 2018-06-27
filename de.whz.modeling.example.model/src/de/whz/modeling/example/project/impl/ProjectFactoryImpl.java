@@ -2,30 +2,34 @@
  */
 package de.whz.modeling.example.project.impl;
 
-import de.whz.modeling.example.project.*;
-
 import java.util.Calendar;
+import java.util.UUID;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import de.whz.modeling.example.project.Organization;
+import de.whz.modeling.example.project.Participant;
+import de.whz.modeling.example.project.ParticipantRole;
+import de.whz.modeling.example.project.Person;
+import de.whz.modeling.example.project.Project;
+import de.whz.modeling.example.project.ProjectFactory;
+import de.whz.modeling.example.project.ProjectPackage;
+
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model <b>Factory</b>.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
+ * end-user-doc -->
  * @generated
  */
 public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	/**
 	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @generated
 	 */
 	public static ProjectFactory init() {
@@ -42,9 +46,9 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Creates an instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
+	 * 
 	 * @generated
 	 */
 	public ProjectFactoryImpl() {
@@ -52,8 +56,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -69,8 +72,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -104,8 +106,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -139,8 +140,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Organization createOrganization() {
@@ -149,8 +149,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Project createProject() {
@@ -159,8 +158,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Person createPerson() {
@@ -169,8 +167,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Participant createParticipant() {
@@ -179,8 +176,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ParticipantRole createParticipantRoleFromString(EDataType eDataType, String initialValue) {
@@ -190,8 +186,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertParticipantRoleToString(EDataType eDataType, Object instanceValue) {
@@ -199,8 +194,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Integer createIntegerFromString(EDataType eDataType, String initialValue) {
@@ -208,8 +202,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertIntegerToString(EDataType eDataType, Object instanceValue) {
@@ -217,8 +210,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Long createLongFromString(EDataType eDataType, String initialValue) {
@@ -226,8 +218,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertLongToString(EDataType eDataType, Object instanceValue) {
@@ -235,8 +226,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Float createFloatFromString(EDataType eDataType, String initialValue) {
@@ -244,8 +234,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertFloatToString(EDataType eDataType, Object instanceValue) {
@@ -253,8 +242,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Double createDoubleFromString(EDataType eDataType, String initialValue) {
@@ -262,8 +250,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertDoubleToString(EDataType eDataType, Object instanceValue) {
@@ -271,8 +258,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Byte createByteFromString(EDataType eDataType, String initialValue) {
@@ -280,8 +266,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertByteToString(EDataType eDataType, Object instanceValue) {
@@ -289,8 +274,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String createStringFromString(EDataType eDataType, String initialValue) {
@@ -298,8 +282,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertStringToString(EDataType eDataType, Object instanceValue) {
@@ -307,8 +290,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Calendar createDateFromString(EDataType eDataType, String initialValue) {
@@ -316,8 +298,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertDateToString(EDataType eDataType, Object instanceValue) {
@@ -325,8 +306,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Boolean createBooleanFromString(EDataType eDataType, String initialValue) {
@@ -334,8 +314,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertBooleanToString(EDataType eDataType, Object instanceValue) {
@@ -343,17 +322,16 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
 	 */
-	public String createUUIDFromString(EDataType eDataType, String initialValue) {
-		return (String)super.createFromString(eDataType, initialValue);
+	public UUID createUUIDFromString(EDataType eDataType, String initialValue) {
+		return UUID.fromString(initialValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertUUIDToString(EDataType eDataType, Object instanceValue) {
@@ -361,8 +339,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Integer createHoursPerWeekFromString(EDataType eDataType, String initialValue) {
@@ -370,8 +347,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String convertHoursPerWeekToString(EDataType eDataType, Object instanceValue) {
@@ -379,8 +355,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ProjectPackage getProjectPackage() {
@@ -388,8 +363,7 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @deprecated
 	 * @generated
 	 */
@@ -398,4 +372,4 @@ public class ProjectFactoryImpl extends EFactoryImpl implements ProjectFactory {
 		return ProjectPackage.eINSTANCE;
 	}
 
-} //ProjectFactoryImpl
+} // ProjectFactoryImpl

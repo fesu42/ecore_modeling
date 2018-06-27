@@ -179,6 +179,16 @@ public interface ProjectPackage extends EPackage {
 	int PROJECT = 1;
 
 	/**
+	 * The meta object id for the '{@link de.whz.modeling.example.project.impl.PersonImpl <em>Person</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.whz.modeling.example.project.impl.PersonImpl
+	 * @see de.whz.modeling.example.project.impl.ProjectPackageImpl#getPerson()
+	 * @generated
+	 */
+	int PERSON = 2;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -231,16 +241,6 @@ public interface ProjectPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROJECT_OPERATION_COUNT = IIDENTIFIABLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.whz.modeling.example.project.impl.PersonImpl <em>Person</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.whz.modeling.example.project.impl.PersonImpl
-	 * @see de.whz.modeling.example.project.impl.ProjectPackageImpl#getPerson()
-	 * @generated
-	 */
-	int PERSON = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -476,7 +476,7 @@ public interface ProjectPackage extends EPackage {
 	 * The meta object id for the '<em>UUID</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.String
+	 * @see java.util.UUID
 	 * @see de.whz.modeling.example.project.impl.ProjectPackageImpl#getUUID()
 	 * @generated
 	 */
@@ -802,12 +802,12 @@ public interface ProjectPackage extends EPackage {
 	EDataType getBoolean();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.String <em>UUID</em>}'.
+	 * Returns the meta object for data type '{@link java.util.UUID <em>UUID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>UUID</em>'.
-	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
+	 * @see java.util.UUID
+	 * @model instanceClass="java.util.UUID"
 	 * @generated
 	 */
 	EDataType getUUID();
@@ -1105,7 +1105,7 @@ public interface ProjectPackage extends EPackage {
 		 * The meta object literal for the '<em>UUID</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.lang.String
+		 * @see java.util.UUID
 		 * @see de.whz.modeling.example.project.impl.ProjectPackageImpl#getUUID()
 		 * @generated
 		 */

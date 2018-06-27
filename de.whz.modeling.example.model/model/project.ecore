@@ -9,56 +9,54 @@
   <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Calendar"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="java.lang.Boolean"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="UUID" instanceClassName="java.lang.String"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Organization" eSuperTypes="project.ecore#//IIdentifiable">
+  <eClassifiers xsi:type="ecore:EDataType" name="UUID" instanceClassName="java.util.UUID"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Organization" eSuperTypes="#//IIdentifiable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="projects" ordered="false"
-        upperBound="-1" eType="ecore:EClass project.ecore#//Project" containment="true"
-        eOpposite="project.ecore#//Project/organization">
+        upperBound="-1" eType="#//Project" containment="true" eOpposite="#//Project/organization">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="employees" ordered="false"
-        upperBound="-1" eType="ecore:EClass project.ecore#//Person" containment="true"
-        eOpposite="project.ecore#//Person/organization">
+        upperBound="-1" eType="#//Person" containment="true" eOpposite="#//Person/organization">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="project.ecore#//IIdentifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="#//IIdentifiable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="organization" ordered="false"
-        lowerBound="1" eType="ecore:EClass project.ecore#//Organization" eOpposite="project.ecore#//Organization/projects">
+        lowerBound="1" eType="#//Organization" eOpposite="#//Organization/projects">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participant" ordered="false"
-        upperBound="-1" eType="ecore:EClass project.ecore#//Participant" containment="true"
-        eOpposite="project.ecore#//Participant/project">
+        upperBound="-1" eType="#//Participant" containment="true" eOpposite="#//Participant/project">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="project.ecore#//IIdentifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//IIdentifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="validWorkload"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weeklyWorkload" ordered="false"
-        lowerBound="1" eType="ecore:EDataType project.ecore#//HoursPerWeek"/>
+        lowerBound="1" eType="#//HoursPerWeek"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" ordered="false"
-        lowerBound="1" eType="ecore:EDataType project.ecore#//String"/>
+        lowerBound="1" eType="#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalWeeklyWorkload" ordered="false"
-        lowerBound="1" eType="ecore:EDataType project.ecore#//HoursPerWeek" derived="true"/>
+        lowerBound="1" eType="#//HoursPerWeek" changeable="false" transient="true"
+        defaultValueLiteral="0" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="organization" ordered="false"
-        lowerBound="1" eType="ecore:EClass project.ecore#//Organization" eOpposite="project.ecore#//Organization/employees">
+        lowerBound="1" eType="#//Organization" eOpposite="#//Organization/employees">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participates" ordered="false"
-        upperBound="-1" eType="ecore:EClass project.ecore#//Participant" eOpposite="project.ecore#//Participant/person">
+        upperBound="-1" eType="#//Participant" eOpposite="#//Participant/person">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
@@ -66,9 +64,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IIdentifiable" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType project.ecore#//String"/>
+        eType="#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uuid" ordered="false" lowerBound="1"
-        eType="ecore:EDataType project.ecore#//UUID"/>
+        eType="#//UUID" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="HoursPerWeek" instanceClassName="java.lang.Integer"/>
   <eClassifiers xsi:type="ecore:EEnum" name="ParticipantRole">
@@ -77,17 +75,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Participant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" ordered="false" lowerBound="1"
-        eType="ecore:EEnum project.ecore#//ParticipantRole"/>
+        eType="#//ParticipantRole"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="weeklyWorkload" ordered="false"
-        lowerBound="1" eType="ecore:EDataType project.ecore#//HoursPerWeek"/>
+        lowerBound="1" eType="#//HoursPerWeek"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="project" ordered="false"
-        lowerBound="1" eType="ecore:EClass project.ecore#//Project" eOpposite="project.ecore#//Project/participant">
+        lowerBound="1" eType="#//Project" eOpposite="#//Project/participant">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="person" ordered="false"
-        lowerBound="1" eType="ecore:EClass project.ecore#//Person" eOpposite="project.ecore#//Person/participates">
+        lowerBound="1" eType="#//Person" eOpposite="#//Person/participates">
       <eAnnotations source="http://www.vsd-project.org/vsee/annotation/description">
         <details key="text" value=""/>
       </eAnnotations>

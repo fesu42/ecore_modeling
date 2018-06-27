@@ -4,6 +4,7 @@ package de.whz.modeling.example.project.impl;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -27,20 +28,13 @@ import de.whz.modeling.example.project.ProjectPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getName
- * <em>Name</em>}</li>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getUuid
- * <em>Uuid</em>}</li>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getWeeklyWorkload
- * <em>Weekly Workload</em>}</li>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getEmail
- * <em>Email</em>}</li>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getTotalWeeklyWorkload
- * <em>Total Weekly Workload</em>}</li>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getOrganization
- * <em>Organization</em>}</li>
- * <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getParticipates
- * <em>Participates</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getUuid <em>Uuid</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getWeeklyWorkload <em>Weekly Workload</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getTotalWeeklyWorkload <em>Total Weekly Workload</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getOrganization <em>Organization</em>}</li>
+ *   <li>{@link de.whz.modeling.example.project.impl.PersonImpl#getParticipates <em>Participates</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,7 +68,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute. <!--
@@ -84,12 +78,11 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getWeeklyWorkload() <em>Weekly
-	 * Workload</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getWeeklyWorkload() <em>Weekly Workload</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getWeeklyWorkload()
 	 * @generated
 	 * @ordered
@@ -97,9 +90,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	protected static final Integer WEEKLY_WORKLOAD_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getWeeklyWorkload() <em>Weekly
-	 * Workload</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getWeeklyWorkload() <em>Weekly Workload</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getWeeklyWorkload()
 	 * @generated
 	 * @ordered
@@ -127,19 +119,17 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	protected String email = EMAIL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTotalWeeklyWorkload() <em>Total Weekly
-	 * Workload</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The default value of the '{@link #getTotalWeeklyWorkload() <em>Total Weekly Workload</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTotalWeeklyWorkload()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer TOTAL_WEEKLY_WORKLOAD_EDEFAULT = null;
+	protected static final Integer TOTAL_WEEKLY_WORKLOAD_EDEFAULT = new Integer(0);
 
 	/**
-	 * The cached value of the '{@link #getTotalWeeklyWorkload() <em>Total Weekly
-	 * Workload</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getTotalWeeklyWorkload() <em>Total Weekly Workload</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTotalWeeklyWorkload()
 	 * @generated
 	 * @ordered
@@ -147,9 +137,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	protected Integer totalWeeklyWorkload = TOTAL_WEEKLY_WORKLOAD_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParticipates() <em>Participates</em>}'
-	 * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getParticipates() <em>Participates</em>}' reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getParticipates()
 	 * @generated
 	 * @ordered
@@ -158,7 +147,6 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected PersonImpl() {
@@ -167,7 +155,6 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -177,7 +164,6 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getName() {
@@ -186,7 +172,6 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -198,20 +183,19 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.PERSON__UUID, oldUuid, uuid));
@@ -219,7 +203,6 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Integer getWeeklyWorkload() {
@@ -228,20 +211,17 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setWeeklyWorkload(Integer newWeeklyWorkload) {
 		Integer oldWeeklyWorkload = weeklyWorkload;
 		weeklyWorkload = newWeeklyWorkload;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.PERSON__WEEKLY_WORKLOAD,
-					oldWeeklyWorkload, weeklyWorkload));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.PERSON__WEEKLY_WORKLOAD, oldWeeklyWorkload, weeklyWorkload));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getEmail() {
@@ -250,7 +230,6 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setEmail(String newEmail) {
@@ -275,256 +254,216 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public void setTotalWeeklyWorkload(Integer newTotalWeeklyWorkload) {
-		Integer oldTotalWeeklyWorkload = totalWeeklyWorkload;
-		totalWeeklyWorkload = newTotalWeeklyWorkload;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD,
-					oldTotalWeeklyWorkload, totalWeeklyWorkload));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public Organization getOrganization() {
-		if (eContainerFeatureID() != ProjectPackage.PERSON__ORGANIZATION)
-			return null;
-		return (Organization) eInternalContainer();
+		if (eContainerFeatureID() != ProjectPackage.PERSON__ORGANIZATION) return null;
+		return (Organization)eInternalContainer();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetOrganization(Organization newOrganization, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject) newOrganization, ProjectPackage.PERSON__ORGANIZATION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOrganization, ProjectPackage.PERSON__ORGANIZATION, msgs);
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setOrganization(Organization newOrganization) {
-		if (newOrganization != eInternalContainer()
-				|| (eContainerFeatureID() != ProjectPackage.PERSON__ORGANIZATION && newOrganization != null)) {
+		if (newOrganization != eInternalContainer() || (eContainerFeatureID() != ProjectPackage.PERSON__ORGANIZATION && newOrganization != null)) {
 			if (EcoreUtil.isAncestor(this, newOrganization))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOrganization != null)
-				msgs = ((InternalEObject) newOrganization).eInverseAdd(this, ProjectPackage.ORGANIZATION__EMPLOYEES,
-						Organization.class, msgs);
+				msgs = ((InternalEObject)newOrganization).eInverseAdd(this, ProjectPackage.ORGANIZATION__EMPLOYEES, Organization.class, msgs);
 			msgs = basicSetOrganization(newOrganization, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.PERSON__ORGANIZATION, newOrganization,
-					newOrganization));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjectPackage.PERSON__ORGANIZATION, newOrganization, newOrganization));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EList<Participant> getParticipates() {
 		if (participates == null) {
-			participates = new EObjectWithInverseResolvingEList<Participant>(Participant.class, this,
-					ProjectPackage.PERSON__PARTICIPATES, ProjectPackage.PARTICIPANT__PERSON);
+			participates = new EObjectWithInverseResolvingEList<Participant>(Participant.class, this, ProjectPackage.PERSON__PARTICIPATES, ProjectPackage.PARTICIPANT__PERSON);
 		}
 		return participates;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ProjectPackage.PERSON__ORGANIZATION:
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			return basicSetOrganization((Organization) otherEnd, msgs);
-		case ProjectPackage.PERSON__PARTICIPATES:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getParticipates()).basicAdd(otherEnd, msgs);
+			case ProjectPackage.PERSON__ORGANIZATION:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOrganization((Organization)otherEnd, msgs);
+			case ProjectPackage.PERSON__PARTICIPATES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParticipates()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ProjectPackage.PERSON__ORGANIZATION:
-			return basicSetOrganization(null, msgs);
-		case ProjectPackage.PERSON__PARTICIPATES:
-			return ((InternalEList<?>) getParticipates()).basicRemove(otherEnd, msgs);
+			case ProjectPackage.PERSON__ORGANIZATION:
+				return basicSetOrganization(null, msgs);
+			case ProjectPackage.PERSON__PARTICIPATES:
+				return ((InternalEList<?>)getParticipates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-		case ProjectPackage.PERSON__ORGANIZATION:
-			return eInternalContainer().eInverseRemove(this, ProjectPackage.ORGANIZATION__EMPLOYEES, Organization.class,
-					msgs);
+			case ProjectPackage.PERSON__ORGANIZATION:
+				return eInternalContainer().eInverseRemove(this, ProjectPackage.ORGANIZATION__EMPLOYEES, Organization.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProjectPackage.PERSON__NAME:
-			return getName();
-		case ProjectPackage.PERSON__UUID:
-			return getUuid();
-		case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
-			return getWeeklyWorkload();
-		case ProjectPackage.PERSON__EMAIL:
-			return getEmail();
-		case ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD:
-			return getTotalWeeklyWorkload();
-		case ProjectPackage.PERSON__ORGANIZATION:
-			return getOrganization();
-		case ProjectPackage.PERSON__PARTICIPATES:
-			return getParticipates();
+			case ProjectPackage.PERSON__NAME:
+				return getName();
+			case ProjectPackage.PERSON__UUID:
+				return getUuid();
+			case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
+				return getWeeklyWorkload();
+			case ProjectPackage.PERSON__EMAIL:
+				return getEmail();
+			case ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD:
+				return getTotalWeeklyWorkload();
+			case ProjectPackage.PERSON__ORGANIZATION:
+				return getOrganization();
+			case ProjectPackage.PERSON__PARTICIPATES:
+				return getParticipates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjectPackage.PERSON__NAME:
-			setName((String) newValue);
-			return;
-		case ProjectPackage.PERSON__UUID:
-			setUuid((String) newValue);
-			return;
-		case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
-			setWeeklyWorkload((Integer) newValue);
-			return;
-		case ProjectPackage.PERSON__EMAIL:
-			setEmail((String) newValue);
-			return;
-		case ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD:
-			setTotalWeeklyWorkload((Integer) newValue);
-			return;
-		case ProjectPackage.PERSON__ORGANIZATION:
-			setOrganization((Organization) newValue);
-			return;
-		case ProjectPackage.PERSON__PARTICIPATES:
-			getParticipates().clear();
-			getParticipates().addAll((Collection<? extends Participant>) newValue);
-			return;
+			case ProjectPackage.PERSON__NAME:
+				setName((String)newValue);
+				return;
+			case ProjectPackage.PERSON__UUID:
+				setUuid((UUID)newValue);
+				return;
+			case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
+				setWeeklyWorkload((Integer)newValue);
+				return;
+			case ProjectPackage.PERSON__EMAIL:
+				setEmail((String)newValue);
+				return;
+			case ProjectPackage.PERSON__ORGANIZATION:
+				setOrganization((Organization)newValue);
+				return;
+			case ProjectPackage.PERSON__PARTICIPATES:
+				getParticipates().clear();
+				getParticipates().addAll((Collection<? extends Participant>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjectPackage.PERSON__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case ProjectPackage.PERSON__UUID:
-			setUuid(UUID_EDEFAULT);
-			return;
-		case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
-			setWeeklyWorkload(WEEKLY_WORKLOAD_EDEFAULT);
-			return;
-		case ProjectPackage.PERSON__EMAIL:
-			setEmail(EMAIL_EDEFAULT);
-			return;
-		case ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD:
-			setTotalWeeklyWorkload(TOTAL_WEEKLY_WORKLOAD_EDEFAULT);
-			return;
-		case ProjectPackage.PERSON__ORGANIZATION:
-			setOrganization((Organization) null);
-			return;
-		case ProjectPackage.PERSON__PARTICIPATES:
-			getParticipates().clear();
-			return;
+			case ProjectPackage.PERSON__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ProjectPackage.PERSON__UUID:
+				setUuid(UUID_EDEFAULT);
+				return;
+			case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
+				setWeeklyWorkload(WEEKLY_WORKLOAD_EDEFAULT);
+				return;
+			case ProjectPackage.PERSON__EMAIL:
+				setEmail(EMAIL_EDEFAULT);
+				return;
+			case ProjectPackage.PERSON__ORGANIZATION:
+				setOrganization((Organization)null);
+				return;
+			case ProjectPackage.PERSON__PARTICIPATES:
+				getParticipates().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProjectPackage.PERSON__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case ProjectPackage.PERSON__UUID:
-			return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
-		case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
-			return WEEKLY_WORKLOAD_EDEFAULT == null ? weeklyWorkload != null
-					: !WEEKLY_WORKLOAD_EDEFAULT.equals(weeklyWorkload);
-		case ProjectPackage.PERSON__EMAIL:
-			return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-		case ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD:
-			return TOTAL_WEEKLY_WORKLOAD_EDEFAULT == null ? totalWeeklyWorkload != null
-					: !TOTAL_WEEKLY_WORKLOAD_EDEFAULT.equals(totalWeeklyWorkload);
-		case ProjectPackage.PERSON__ORGANIZATION:
-			return getOrganization() != null;
-		case ProjectPackage.PERSON__PARTICIPATES:
-			return participates != null && !participates.isEmpty();
+			case ProjectPackage.PERSON__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ProjectPackage.PERSON__UUID:
+				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
+			case ProjectPackage.PERSON__WEEKLY_WORKLOAD:
+				return WEEKLY_WORKLOAD_EDEFAULT == null ? weeklyWorkload != null : !WEEKLY_WORKLOAD_EDEFAULT.equals(weeklyWorkload);
+			case ProjectPackage.PERSON__EMAIL:
+				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
+			case ProjectPackage.PERSON__TOTAL_WEEKLY_WORKLOAD:
+				return TOTAL_WEEKLY_WORKLOAD_EDEFAULT == null ? totalWeeklyWorkload != null : !TOTAL_WEEKLY_WORKLOAD_EDEFAULT.equals(totalWeeklyWorkload);
+			case ProjectPackage.PERSON__ORGANIZATION:
+				return getOrganization() != null;
+			case ProjectPackage.PERSON__PARTICIPATES:
+				return participates != null && !participates.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");

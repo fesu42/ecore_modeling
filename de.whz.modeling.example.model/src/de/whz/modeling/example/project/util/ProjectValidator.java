@@ -5,6 +5,7 @@ package de.whz.modeling.example.project.util;
 import java.util.Calendar;
 import java.util.Map;
 
+import java.util.UUID;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -28,17 +29,15 @@ import de.whz.modeling.example.project.ProjectPackage;
  */
 public class ProjectValidator extends EObjectValidator {
 	/**
-	 * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached model package
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public static final ProjectValidator INSTANCE = new ProjectValidator();
 
 	/**
-	 * A constant for the {@link org.eclipse.emf.common.util.Diagnostic#getSource()
-	 * source} of diagnostic {@link org.eclipse.emf.common.util.Diagnostic#getCode()
-	 * codes} from this package. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * A constant for the {@link org.eclipse.emf.common.util.Diagnostic#getSource() source} of diagnostic {@link org.eclipse.emf.common.util.Diagnostic#getCode() codes} from this package.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.common.util.Diagnostic#getSource()
 	 * @see org.eclipse.emf.common.util.Diagnostic#getCode()
 	 * @generated
@@ -55,10 +54,9 @@ public class ProjectValidator extends EObjectValidator {
 	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 0;
 
 	/**
-	 * A constant with a fixed name that can be used as the base value for
-	 * additional hand written constants in a derived class. <!-- begin-user-doc -->
+	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
@@ -74,66 +72,64 @@ public class ProjectValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Returns the package of this validator switch. <!-- begin-user-doc --> <!--
+	 * Returns the package of this validator switch.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected EPackage getEPackage() {
-		return ProjectPackage.eINSTANCE;
+	  return ProjectPackage.eINSTANCE;
 	}
 
 	/**
 	 * Calls <code>validateXXX</code> for the corresponding classifier of the model.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		switch (classifierID) {
-		case ProjectPackage.ORGANIZATION:
-			return validateOrganization((Organization) value, diagnostics, context);
-		case ProjectPackage.PROJECT:
-			return validateProject((Project) value, diagnostics, context);
-		case ProjectPackage.PERSON:
-			return validatePerson((Person) value, diagnostics, context);
-		case ProjectPackage.IIDENTIFIABLE:
-			return validateIIdentifiable((IIdentifiable) value, diagnostics, context);
-		case ProjectPackage.PARTICIPANT:
-			return validateParticipant((Participant) value, diagnostics, context);
-		case ProjectPackage.PARTICIPANT_ROLE:
-			return validateParticipantRole((ParticipantRole) value, diagnostics, context);
-		case ProjectPackage.INTEGER:
-			return validateInteger((Integer) value, diagnostics, context);
-		case ProjectPackage.LONG:
-			return validateLong((Long) value, diagnostics, context);
-		case ProjectPackage.FLOAT:
-			return validateFloat((Float) value, diagnostics, context);
-		case ProjectPackage.DOUBLE:
-			return validateDouble((Double) value, diagnostics, context);
-		case ProjectPackage.BYTE:
-			return validateByte((Byte) value, diagnostics, context);
-		case ProjectPackage.STRING:
-			return validateString((String) value, diagnostics, context);
-		case ProjectPackage.DATE:
-			return validateDate((Calendar) value, diagnostics, context);
-		case ProjectPackage.BOOLEAN:
-			return validateBoolean((Boolean) value, diagnostics, context);
-		case ProjectPackage.UUID:
-			return validateUUID((String) value, diagnostics, context);
-		case ProjectPackage.HOURS_PER_WEEK:
-			return validateHoursPerWeek((Integer) value, diagnostics, context);
-		default:
-			return true;
+			case ProjectPackage.ORGANIZATION:
+				return validateOrganization((Organization)value, diagnostics, context);
+			case ProjectPackage.PROJECT:
+				return validateProject((Project)value, diagnostics, context);
+			case ProjectPackage.PERSON:
+				return validatePerson((Person)value, diagnostics, context);
+			case ProjectPackage.IIDENTIFIABLE:
+				return validateIIdentifiable((IIdentifiable)value, diagnostics, context);
+			case ProjectPackage.PARTICIPANT:
+				return validateParticipant((Participant)value, diagnostics, context);
+			case ProjectPackage.PARTICIPANT_ROLE:
+				return validateParticipantRole((ParticipantRole)value, diagnostics, context);
+			case ProjectPackage.INTEGER:
+				return validateInteger((Integer)value, diagnostics, context);
+			case ProjectPackage.LONG:
+				return validateLong((Long)value, diagnostics, context);
+			case ProjectPackage.FLOAT:
+				return validateFloat((Float)value, diagnostics, context);
+			case ProjectPackage.DOUBLE:
+				return validateDouble((Double)value, diagnostics, context);
+			case ProjectPackage.BYTE:
+				return validateByte((Byte)value, diagnostics, context);
+			case ProjectPackage.STRING:
+				return validateString((String)value, diagnostics, context);
+			case ProjectPackage.DATE:
+				return validateDate((Calendar)value, diagnostics, context);
+			case ProjectPackage.BOOLEAN:
+				return validateBoolean((Boolean)value, diagnostics, context);
+			case ProjectPackage.UUID:
+				return validateUUID((UUID)value, diagnostics, context);
+			case ProjectPackage.HOURS_PER_WEEK:
+				return validateHoursPerWeek((Integer)value, diagnostics, context);
+			default:
+				return true;
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateOrganization(Organization organization, DiagnosticChain diagnostics,
@@ -143,7 +139,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateProject(Project project, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -152,29 +147,19 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validatePerson(Person person, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(person, diagnostics, context))
-			return false;
+		if (!validate_NoCircularContainment(person, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryDataValueConforms(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryReferenceIsContained(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryBidirectionalReferenceIsPaired(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryProxyResolves(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_UniqueID(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryKeyUnique(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validate_EveryMapEntryUnique(person, diagnostics, context);
-		if (result || diagnostics != null)
-			result &= validatePerson_validWorkload(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(person, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePerson_validWorkload(person, diagnostics, context);
 		return result;
 	}
 
@@ -199,7 +184,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateIIdentifiable(IIdentifiable iIdentifiable, DiagnosticChain diagnostics,
@@ -209,7 +193,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateParticipant(Participant participant, DiagnosticChain diagnostics,
@@ -219,7 +202,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateParticipantRole(ParticipantRole participantRole, DiagnosticChain diagnostics,
@@ -229,7 +211,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateInteger(int integer, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -238,7 +219,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateLong(long long_, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -247,7 +227,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateFloat(float float_, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -256,7 +235,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateDouble(double double_, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -265,7 +243,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateByte(byte byte_, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -274,7 +251,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateString(String string, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -283,7 +259,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateDate(Calendar date, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -292,7 +267,6 @@ public class ProjectValidator extends EObjectValidator {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateBoolean(Boolean boolean_, DiagnosticChain diagnostics, Map<Object, Object> context) {
@@ -300,17 +274,16 @@ public class ProjectValidator extends EObjectValidator {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateUUID(String uuid, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateUUID(UUID uuid, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public boolean validateHoursPerWeek(Integer hoursPerWeek, DiagnosticChain diagnostics,
@@ -319,16 +292,14 @@ public class ProjectValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Returns the resource locator that will be used to fetch messages for this
-	 * validator's diagnostics. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * Returns the resource locator that will be used to fetch messages for this validator's diagnostics.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
 		// TODO
-		// Specialize this to return a resource locator for messages specific to this
-		// validator.
+		// Specialize this to return a resource locator for messages specific to this validator.
 		// Ensure that you remove @generated or mark it @generated NOT
 		return super.getResourceLocator();
 	}
