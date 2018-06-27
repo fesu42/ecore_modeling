@@ -3,11 +3,11 @@
 A little example of creating an ecore model, making use of the EMF Code generation feature and integrating the demo model into a small RCP application.
 
 ## Plugin Overview
-de.whz.modeling.example.
-* model - the model and generated source code
-* model.edit - generated controller code (such as label provider, etc.)
-* model.editor - generated viewer code
-* rcp - a sample RCP application, which creates a little demo data set and shows the data in a navigator view. Objects can be viewed in a generic view.
+de.whz.modeling.example
+* ~.model - the model and generated source code
+* ~.model.edit - generated controller code (such as label provider, etc.)
+* ~.model.editor - generated viewer code
+* ~.rcp - a sample RCP application, which creates a little demo data set and shows the data in a navigator view. Objects can be viewed in a generic view.
 
 ## Installing and Running the examples
 Please use the Eclipse Modeling Tools (I used the Oxygen 3 release -> https://www.eclipse.org/downloads/packages/eclipse-modeling-tools/oxygen3a)
@@ -20,6 +20,6 @@ Open 'rcp.product' (de.whz.modeling.example.rcp plugin). Clicking the hyperlink 
 
 
 ## Noteworthy code
-* de.whz.modeling.example.rcp.helpers.DemoDataHelper - creates the demo data set and gives a overview of the generated API
+* de.whz.modeling.example.rcp.helpers.DemoDataHelper - creates the demo data set and gives an overview of the generated API
 * de.whz.modeling.example.rcp.parts.GenericEditorPart - although it's no editor at all, this part is able to show any EObject. It explores the metaclass of the context EObject and lists reflectively all modeled properties (EAttributes) and associations (EReferences). Futhermore it validates the context object and lists violations.
 * de.whz.modeling.example.model.project.util.ProjectValidator - adds a custom constraint (see method 'validatePerson\_validWorkload) for Participant (see also the attached EAnnotation at Participant in the ecore model).
