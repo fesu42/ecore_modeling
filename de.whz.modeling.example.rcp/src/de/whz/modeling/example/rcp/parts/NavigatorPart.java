@@ -8,6 +8,8 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService.PartState;
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
@@ -31,21 +34,28 @@ import org.eclipse.swt.widgets.MenuItem;
 
 import de.whz.modeling.example.project.IIdentifiable;
 import de.whz.modeling.example.project.Organization;
+import de.whz.modeling.example.rcp.Activator;
+import de.whz.modeling.example.rcp.helpers.DataRepository;
 import de.whz.modeling.example.rcp.helpers.DemoDataHelper;
 import de.whz.modeling.example.rcp.helpers.TreeItem;
 import de.whz.modeling.example.rcp.provider.OrganizationTreeContentProvider;
 
 public class NavigatorPart {
 
-	private Resource res;
+//	private Resource res;
 
 	@Inject
 	private EPartService partService;
+	@Inject
+	private DataRepository dataRepository;
 
 	@PostConstruct
 	public void postConstruct(Composite parent) {
-		initResource();
-
+		Resource res = dataRepository.getResource();
+		if (res == null) {
+			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Resource not loaded!"));
+			MessageDialog.openError(parent.getShell(), "Error", "Could not load resource file!");
+		}
 		TreeViewer tree = new TreeViewer(parent);
 		tree.setLabelProvider(new LabelProvider() {
 			@Override
@@ -93,33 +103,6 @@ public class NavigatorPart {
 			}
 		});
 		menuManager.setRemoveAllWhenShown(true);
-	}
-
-	private void initResource() {
-		URI fileUri = URI.createFileURI(System.getProperty("user.home") + "/.modeling_example/theProject.project");
-		res = new ResourceSetImpl().createResource(fileUri);
-
-		try {
-			res.load(Collections.emptyMap());
-		} catch (IOException e) {
-			System.err.println(fileUri + " not found. Try to create a demo file...");
-		}
-
-		// dirty little hack to initialize data
-		if (res.getContents().isEmpty()) {
-			Organization organization = DemoDataHelper.INSTANCE.createRootOrganization(res);
-			DemoDataHelper.INSTANCE.initDemoData(organization);
-		}
-		DemoDataHelper.INSTANCE.setContextOrganization((Organization) res.getContents().get(0));
-	}
-
-	@PreDestroy
-	public void preDestroy() {
-		try {
-			res.save(Collections.emptyMap());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 }
