@@ -15,11 +15,19 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.MenuAdapter;
+import org.eclipse.swt.events.MenuEvent;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MenuItem;
 
 import de.whz.modeling.example.project.IIdentifiable;
 import de.whz.modeling.example.project.Organization;
@@ -65,6 +73,26 @@ public class NavigatorPart {
 		});
 		tree.setInput(res);
 		tree.refresh();
+		tree.expandAll();
+
+		MenuManager menuManager = new MenuManager("Popup");
+		Menu menu = menuManager.createContextMenu(tree.getControl());
+		tree.getControl().setMenu(menu);
+		menu.addMenuListener(new MenuAdapter() {
+			@Override
+			public void menuShown(MenuEvent e) {
+				MenuItem menuItem = new MenuItem(menu, SWT.PUSH);
+				menuItem.setText("Refresh");
+				menuItem.addSelectionListener(new SelectionAdapter() {
+					@Override
+					public void widgetSelected(SelectionEvent e) {
+						tree.refresh();
+						tree.expandAll();
+					}
+				});
+			}
+		});
+		menuManager.setRemoveAllWhenShown(true);
 	}
 
 	private void initResource() {
