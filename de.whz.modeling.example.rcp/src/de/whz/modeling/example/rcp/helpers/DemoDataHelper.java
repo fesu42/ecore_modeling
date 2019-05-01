@@ -15,6 +15,16 @@ public enum DemoDataHelper {
 
 	INSTANCE;
 
+	private Organization theOrganization;
+
+	public Organization getOrganization() {
+		return theOrganization;
+	}
+
+	public void setContextOrganization(Organization organization) {
+		theOrganization = organization;
+	}
+
 	public Organization createRootOrganization(Resource container) {
 		// create a new organization object via the provided factory
 		Organization organization = ProjectFactory.eINSTANCE.createOrganization();
@@ -28,7 +38,6 @@ public enum DemoDataHelper {
 	}
 
 	public void initDemoData(Organization organization) {
-
 		// create a new project object and use the provided API to set properties
 		Project fooTc = ProjectFactory.eINSTANCE.createProject();
 		fooTc.setName("Foo Thin Client");

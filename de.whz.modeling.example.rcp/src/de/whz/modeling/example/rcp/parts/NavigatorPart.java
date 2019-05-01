@@ -110,6 +110,7 @@ public class NavigatorPart {
 			Organization organization = DemoDataHelper.INSTANCE.createRootOrganization(res);
 			DemoDataHelper.INSTANCE.initDemoData(organization);
 		}
+		DemoDataHelper.INSTANCE.setContextOrganization((Organization) res.getContents().get(0));
 	}
 
 	@PreDestroy
