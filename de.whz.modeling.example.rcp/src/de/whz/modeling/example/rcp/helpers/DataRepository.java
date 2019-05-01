@@ -23,18 +23,19 @@ public class DataRepository {
 	public static final String DEFAULT_RESOURCE_PATH = System.getProperty("user.home") + "/.modeling_example/theProject.project";
 
 	public Resource loadResource() {
-		URI fileUri = URI.createFileURI(DEFAULT_RESOURCE_PATH);
+		final URI fileUri = URI.createFileURI(DEFAULT_RESOURCE_PATH);
 		resource = new ResourceSetImpl().createResource(fileUri);
 
 		try {
 			resource.load(Collections.emptyMap());
-		} catch (IOException e) {
+		} catch (final IOException e) {
+			// catch exception, resource will be initialized with demo data and saved later
 			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, fileUri + " not found! Try to create a demo file."));
 		}
 
 		// dirty little hack to initialize data
 		if (resource.getContents().isEmpty()) {
-			Organization organization = DemoDataHelper.INSTANCE.createRootOrganization(resource);
+			final Organization organization = DemoDataHelper.INSTANCE.createRootOrganization(resource);
 			DemoDataHelper.INSTANCE.initDemoData(organization);
 		}
 		DemoDataHelper.INSTANCE.setContextOrganization((Organization) resource.getContents().get(0));
@@ -48,8 +49,12 @@ public class DataRepository {
 		return resource;
 	}
 
-	public void saveResource() {
-		// TODO add implementation
+	public void saveResource() throws IOException {
+		if (resource != null) {
+			resource.save(Collections.emptyMap());
+		} else {
+			throw new IllegalStateException("Resource is not initialized! Save is not a vaild action!");
+		}
 	}
 
 }
